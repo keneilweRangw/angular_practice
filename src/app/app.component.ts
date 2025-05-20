@@ -2,9 +2,16 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <div *ngIf="screenWidth < 650">
+      <router-outlet />
+    </div>
+
+    <div *ngIf="screenWidth >= 650">
+      <app-desktop />
+    </div>
+  `,
 })
 export class AppComponent {
-  title = 'cryptonana';
+  screenWidth: number = window.innerWidth;
 }

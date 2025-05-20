@@ -1,1 +1,31 @@
-<p>register works!</p>
+<div class="w-full h-screen flex items-center justify-center">
+
+    <div class="w-96 border shadow-md rounded-md p-8 flex gap-4 flex-col">
+
+        <div class="text-4xl text-center mb-6">Register</div>
+
+        <div class="">
+            <input type="text" class="w-full p-2 rounded-md focus:outline-none " placeholder="Username">
+        </div>
+
+        <div class="">
+            <input type="text" class="w-full p-2 rounded-md focus:outline-none " placeholder="Email">
+        </div>
+        <div class="">
+            <input type="password" class="w-full p-2 rounded-md focus:outline-none " placeholder="Password">
+        </div>
+        <div class="">
+            <input type="password" class="w-full p-2 rounded-md focus:outline-none " placeholder="Confirm Password">
+        </div>
+
+        <div class="text-xs text-right">Do you have an account? <a class="font-bold cursor-pointer"
+                routerLink="/login">Login</a>
+        </div>
+
+        <div>
+            <app-button label="Register" (onBtnClick)="onRegister($event)" />
+        </div>
+
+    </div>
+
+</div>

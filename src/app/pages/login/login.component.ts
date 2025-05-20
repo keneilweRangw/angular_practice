@@ -3,10 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  onLogIn(e: any): void {
-    console.log(e);
-  }
+  onLogIn(e: any): void {}
 }
