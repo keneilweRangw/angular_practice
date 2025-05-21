@@ -1,17 +1,12 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  template: `
-    <div *ngIf="screenWidth < 650">
-      <router-outlet />
-    </div>
-
-    <div *ngIf="screenWidth >= 650">
-      <app-desktop />
-    </div>
-  `,
+  imports: [RouterOutlet],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
-  screenWidth: number = window.innerWidth;
+  title = 'this';
 }
