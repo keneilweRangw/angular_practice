@@ -19,4 +19,8 @@ export class CountryService {
   setCountries(countries: any[]) {
     this.countries.set(countries);
   }
+
+  searchByCountryName(name: string) {
+    return this.http.get(`${this.API}/name/${name}`);
+  }
 }

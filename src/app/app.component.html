@@ -1,3 +1,7 @@
 <div class="bg-slate-100 h-dvh relative">
+    @if(loaderService.loader()) {
+    <app-loading />
+    }
+
     <router-outlet />
 </div>
