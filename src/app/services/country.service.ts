@@ -23,4 +23,5 @@ export class CountryService {
   searchByCountryName(name: string) {
     return this.http.get(`${this.API}/name/${name}`);
   }
+
 }

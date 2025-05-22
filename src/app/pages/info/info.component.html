@@ -1,1 +1,13 @@
-<p>info works!</p>
+<div class="w-screen h-full flex flex-col overflow-hidden p-4">
+    <div>
+        <button [routerLink]="['/']" routerLinkActive="router-link-active"
+            class="bg-slate-200 px-3 py-1 rounded-md shadow cursor-pointer hover:bg-slate-300 hover:shadow-2xl">
+            <i class="bi bi-arrow-left"></i> Back</button>
+    </div>
+
+    @if(country) {
+    <h1 class="text-center font-thin text-4xl md:text-6xl">{{country[0].name.common}}</h1>
+
+    }
+
+</div>

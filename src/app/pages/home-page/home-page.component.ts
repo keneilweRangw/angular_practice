@@ -18,7 +18,6 @@ export class HomePageComponent implements OnInit {
     this.countryService.getAllCountries().subscribe(
       (data) => {
         this.loaderService.hide();
-        console.log(data);
         const countries: any[] = Object.entries(data);
         this.countryService.setCountries(countries);
       },
