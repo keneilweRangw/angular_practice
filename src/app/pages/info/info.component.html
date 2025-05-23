@@ -7,7 +7,16 @@
 
     @if(country) {
     <h1 class="text-center font-thin text-4xl md:text-6xl">{{country[0].name.common}}</h1>
+    <img [src]="country[0].flags.png" class=" mx-auto w-200 mt-4" alt="" />
 
     }
 
+    @if(country) {
+    <h1 class="text-center font-thin text-1l md:text-6l">
+        <a href="{{ country[0].maps.googleMaps }}" class="text-blue-500 underline" target="_blank">
+            View on Google Maps
+        </a>
+    </h1>
+
+    }
 </div>
